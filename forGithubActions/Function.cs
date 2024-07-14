@@ -9,6 +9,7 @@ public class Function
 {
     
     /// <summary>
+    /// What am i even doing 'di na ako bayad dito pre HAHDAFDHAAHFA
     /// A simple function that takes a string and does a ToUpper
     /// </summary>
     /// <param name="input">The event for the Lambda function handler to process.</param>
