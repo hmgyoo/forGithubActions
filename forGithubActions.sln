@@ -7,6 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "forGithubActionsTest", "for
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "forGithubActionsTest.Tests", "forGithubActionsTest.Tests\forGithubActionsTest.Tests.csproj", "{136F4607-9358-458E-97F0-2BE07A6322F0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{37087BCC-EC53-470D-B0BC-A3F6AB26B48D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "worflows", "worflows", "{3C80B3B5-9BBD-42AA-B267-E5748AFB8952}"
+	ProjectSection(SolutionItems) = preProject
+		sample.yaml = sample.yaml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +31,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3C80B3B5-9BBD-42AA-B267-E5748AFB8952} = {37087BCC-EC53-470D-B0BC-A3F6AB26B48D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DF212054-167F-4FF6-B13B-84C03485B421}
