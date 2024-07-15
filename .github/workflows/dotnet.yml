@@ -39,7 +39,7 @@ jobs:
       - name: Restore dependencies
         run: dotnet restore
       - name: Build project
-        run: dotnet publish -c Release
+        run: dotnet publish -c Release /p:PublishReadyToRun=false
       - name: Zip the published project
         run: zip -r release.zip ./bin/Release/net8.0/publish/*
       - name: Deploy to AWS Lambda
