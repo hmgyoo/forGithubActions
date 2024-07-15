@@ -39,10 +39,11 @@ jobs:
       - name: Restore dependencies
         run: dotnet restore
       - name: Build project
-        run: dotnet publish -c Release /p:PublishReadyToRun=false
+        run: dotnet publish -c Release /p:PublishReadyToRun=false -o ./publish
       - name: Zip the published project
-        run: zip -r release.zip ./bin/Release/net8.0/publish/*
+        run: zip -r release.zip ./publish/*
       - name: Deploy to AWS Lambda
+        if: success()
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
