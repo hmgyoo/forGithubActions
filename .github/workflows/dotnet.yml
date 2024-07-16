@@ -39,9 +39,9 @@ jobs:
       - name: Restore dependencies
         run: dotnet restore
       - name: Build project
-        run: cd ./forGithubActions
+        run: cd ./forGithubActionsTest
       - name: Deploy function to Lambda format
-        run: dotnet lambda deploy-function forGithubActions
+        run: dotnet lambda deploy-function forGithubActionsTest
       - name: Deploy to AWS Lambda
         if: success()
         env:
@@ -51,4 +51,4 @@ jobs:
         run: |
           aws lambda update-function-code \
             --function-name githubActionsDocu \
-            --zip-file fileb://forGithubActions//bin//Release//net8.0//forGithubActions.zip
+            --zip-file fileb://forGithubActions//bin//Release//net8.0//forGithubActionsTest.zip
